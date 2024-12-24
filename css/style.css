@@ -12,7 +12,7 @@
 
 .slide-image {
   /*Make the image container full screen*/
-  width: 70vw;
+  width: 85vw;
   height: 100vh;
   /*Make the image cover the the screen and center it*/
   background-position: center;
