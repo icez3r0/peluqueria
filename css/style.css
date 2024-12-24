@@ -59,7 +59,33 @@
 #slide6 {
   background-image: url('../img/image6.jpg');
 }
-
+#slide7 {
+  background-image: url('../img/image7.jpg');
+}
+#slide8 {
+  background-image: url('../img/image8.jpg');
+}
+#slide9 {
+  background-image: url('../img/image9.jpg');
+}
+#slide10 {
+  background-image: url('../img/image10.jpg');
+}
+#slide11 {
+  background-image: url('../img/image11.jpg');
+}
+#slide12 {
+  background-image: url('../img/image12.jpg');
+}
+#slide13 {
+  background-image: url('../img/image13.jpg');
+}
+#slide14 {
+  background-image: url('../img/image14.jpg');
+}
+#slide15 {
+  background-image: url('../img/image15.jpg');
+}
 /*Mobile Devices*/
 @media (max-device-width: 1024px) {
   .arrow {
