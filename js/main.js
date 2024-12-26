@@ -1,8 +1,8 @@
 $(document).ready(function(){
-  var pauseInterval = false;
+  // var pauseInterval = false;
 
-  // set an interval for the slide to run on
-  var interval = window.setInterval(rotateSlides, 3000) // Duration until slide changes (3sec)
+  // Eliminar el intervalo para que las imágenes no cambien automáticamente
+  // var interval = window.setInterval(rotateSlides, 3000); // Duration until slide changes (3sec)
 
   function rotateSlides(){
     // Get the first slide and store it
@@ -30,27 +30,24 @@ $(document).ready(function(){
   $('.slide-image').click(nextSlide);
 
   function previousSlide(){
-    // Stop the interval from running
-    window.clearInterval(interval);
+    // No need to stop the interval
+    // window.clearInterval(interval);
     // Get the current slide
     var $currentSlide = $('#carousel').find('div:first');
     // Get the width of the slide so we know how much to slide by
     var width = $currentSlide.width();
     // Get the previous slide
     var $previousSlide = $('#carousel').find('div:last')
-    // Move the previous slide's positition to the front of the queue
+    // Move the previous slide's position to the front of the queue
     $previousSlide.css({marginLeft: -width})
     $currentSlide.before($previousSlide);
     // Animate to the previous slide
-    $previousSlide.animate({marginLeft: 0}, 1000, function(){
-      // Resume the interval
-      interval = window.setInterval(rotateSlides, 3000);
-    });
+    $previousSlide.animate({marginLeft: 0}, 1000);
   }
 
   function nextSlide(){
-    // Stop the interval from running
-    window.clearInterval(interval);
+    // No need to stop the interval
+    // window.clearInterval(interval);
     // Get the current slide
     var $currentSlide = $('#carousel').find('div:first');
     // Get the width of the slide so we know how much to slide by
@@ -61,10 +58,7 @@ $(document).ready(function(){
       var $lastSlide = $('#carousel').find('div:last')
       $lastSlide.after($currentSlide);
       // Reset slide position to the end of the queue
-      $currentSlide.css({marginLeft: 0})
-      // Resume the interval
-      interval = window.setInterval(rotateSlides, 3000);
+      $currentSlide.css({marginLeft: 0});
     });
   }
-
 });
