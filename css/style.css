@@ -86,6 +86,9 @@
 #slide15 {
   background-image: url('../img/image15.jpg');
 }
+#slide16{
+  background-image: url('/img/image16.jpg');
+}
 /*Mobile Devices*/
 @media (max-device-width: 1024px) {
   .arrow {
